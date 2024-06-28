@@ -1,5 +1,7 @@
 const pages = ["template1.html","template2.html","template3.html","template4.html","template5.html","template6.html","template7.html","template8.html","template9.html","template10.html","template11.html","template12.html","template14.html"];    // <----- ici c'est les différentes pages .Pour en rajouter une a l'appli , il suffit de rajouter après "template12.html" une virgule puis rajouter des guillemets avec a l'interieur le nom de votre page et rajoutant bien << .html >> a la fin : "template-le_Numero_Suivant_De_La_Page.html" 
 
+const tempsEntreLesPages = 20;  // <---- temps d'affichage entre différentes pages , 20sec = 20000, 10sec= 10000 etc (unité:millisecondes)
+
 const lienRepo = "./les différentes pages/";
 
 let currentPage = 0;
@@ -24,7 +26,7 @@ function loadPage(lienPage) {
 setInterval(() => {
     currentPage = (currentPage + 1) % pages.length;
     // loadPage(pages[currentPage]);
-}, 20000);       // <---- temps d'affichage entre différentes pages , 20sec = 20000, 10sec= 10000 etc (unité:millisecondes)
+}, tempsEntreLesPages*100);       
 
 function updateDateTime() {
     const now = new Date();

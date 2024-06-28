@@ -25,7 +25,7 @@ function loadPage(lienPage) {
 
 setInterval(() => {
     currentPage = (currentPage + 1) % pages.length;
-    // loadPage(pages[currentPage]);
+    loadPage(pages[currentPage]);
 }, tempsEntreLesPages*100);       
 
 function updateDateTime() {

@@ -83,7 +83,7 @@ async function fetchWeather() {
 }
 
 fetchWeather();
-setInterval(fetchWeather, 600000); // Update weather every 10 minutes
+setInterval(fetchWeather, 600000); // Update weather every 60 minutes
 
 // Initial page load
 loadPage(pages[0]);
